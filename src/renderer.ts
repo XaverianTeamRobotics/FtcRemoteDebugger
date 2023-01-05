@@ -32,7 +32,7 @@ import { ipcRenderer } from 'electron'
 import { IpcRendererEvent } from 'electron/main'
 
 // Comment line below for easier UI debugging
-// document.getElementById("robot-commands").style.display = "none"
+document.getElementById("robot-commands").style.display = "none"
 
 // Prompt the user for an IP address to connect to
 const connectButton = document.getElementById('connect-button')
