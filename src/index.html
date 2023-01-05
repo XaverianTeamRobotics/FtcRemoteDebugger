@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FTC Remote Debugger</title>
+
+  </head>
+  <body>
+    <header>
+      <h1>
+        FTC Remote Debugger
+      </h1>
+
+      <p id="about-message">
+        This is a remote debugger for FTC robots. It allows you to view telemetry data and control the robot remotely.
+        <br><br>
+        Designed by team 19460, Hawk Robotics.
+      </p>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <button id="connect-button">Connect To Robot</button>
+        <div class="row">
+          <p>Connection Status: <a id="connection-status" class="bold">Not Connected</a></p>
+        </div>
+      </div>
+      <div class="column" id="messages_div"><p>Messages From Robot:</p><p id="messages" class="bold"></p></div>
+      <div class="container" id="robot-commands">
+        <h2>Motor Management</h1>
+        <div class="row">
+          <input placeholder="Motor Power" id="motor-power-input" type="number" min="-1" max="1" style="width: 100px;" value="0" step="0.01"></input>
+          <div class="column">
+            <button id="set-motor-0-power" disabled>Set Motor 0 Power</button>
+            <button id="set-motor-1-power" disabled>Set Motor 1 Power</button>
+          </div>
+          <div class="column">
+            <button id="set-motor-2-power" disabled>Set Motor 2 Power</button>
+            <button id="set-motor-3-power" disabled>Set Motor 3 Power</button>
+          </div>
+          <div class="column">
+            <button id="set-motor-4-power" disabled>Set Motor 4 Power</button>
+            <button id="set-motor-5-power" disabled>Set Motor 5 Power</button>
+          </div>
+          <div class="column">
+            <button id="set-motor-6-power" disabled>Set Motor 6 Power</button>
+            <button id="set-motor-7-power" disabled>Set Motor 7 Power</button>
+          </div>
+        </div>
+        <button id="set-all-motor-powers" style="width: 400px;">Set All Motor Powers</button>
+        <button id="ono" style="width: 400px; background-color: #a11;">ó no</button>
+
+        <h3>Current Motor Powers</h3>
+        <div class="row">
+          <div class="column">
+            <p>Motor 0: <a id="motor-0-power" class="bold">N/A</a></p>
+            <p>Motor 1: <a id="motor-1-power" class="bold">N/A</a></p>
+          </div>
+          <div class="column">
+            <p>Motor 2: <a id="motor-2-power" class="bold">N/A</a></p>
+            <p>Motor 3: <a id="motor-3-power" class="bold">N/A</a></p>
+          </div>
+          <div class="column">
+            <p>Motor 4: <a id="motor-4-power" class="bold">N/A</a></p>
+            <p>Motor 5: <a id="motor-5-power" class="bold">N/A</a></p>
+          </div>
+          <div class="column">
+            <p>Motor 6: <a id="motor-6-power" class="bold">N/A</a></p>
+            <p>Motor 7: <a id="motor-7-power" class="bold">N/A</a></p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
