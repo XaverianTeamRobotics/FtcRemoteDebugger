@@ -23,6 +23,7 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+    - run: GITHUB_WORKFLOW_URL=https://github.com/$GITHUB_REPOSITORY/actions/runs/latest
     - run: npm ci
     - run: npm run package
     - name: Upload a Build Artifact
