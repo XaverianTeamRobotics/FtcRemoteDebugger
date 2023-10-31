@@ -61,7 +61,9 @@ jobs:
         path: ubuntu-latest
     - name: Compress the builds
       run: |
-        7z a -tzip windows.zip windows-latest/squirrel.windows/x64/
+        cd windows-latest/squirrel.windows/x64/
+        7z a -tzip ftcremotedebugger-windows.zip ./
+        cd ../../..
     - name: Update the release tag
       run: |
         git tag -d latest-ci-build
@@ -69,7 +71,7 @@ jobs:
         git push origin latest-ci-build --force
     - name: Update the release
       run: |
-        gh release upload latest-ci-build windows.zip --clobber
+        gh release upload latest-ci-build ftcremotedebugger-windows.zip --clobber
         gh release upload latest-ci-build ubuntu-latest/deb/x64/ftcremotedebugger_1.0.0_amd64.deb --clobber
         gh release upload latest-ci-build ubuntu-latest/rpm/x64/ftcremotedebugger-1.0.0-1.x86_64.rpm --clobber
         gh release edit latest-ci-build --prerelease --notes "This build was made from commit ${{ github.sha }}."
