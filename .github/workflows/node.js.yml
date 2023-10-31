@@ -6,6 +6,7 @@ name: Build for mac and windows
 on:
   push:
     branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,6 +16,7 @@ jobs:
         include:
           - os: macos-latest
           - os: windows-latest
+          - os: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
