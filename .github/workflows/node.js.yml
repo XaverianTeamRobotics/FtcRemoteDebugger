@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    os: windows-latest
+    runs-on: windows-latest
 
     concurrency:
       group: 'build'
