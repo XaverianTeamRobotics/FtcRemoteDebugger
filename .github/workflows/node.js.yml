@@ -23,7 +23,6 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-      run: sudo apt-get install -y rpmbuild
     - run: npm ci
     - run: npm run make
     - name: Upload a Build Artifact
@@ -31,30 +30,10 @@ jobs:
       with:
         name: ${{ matrix.os }}
         path: out/make
-
-  release:
-    runs-on: ubuntu-latest
-    needs: [ 'build' ]
-    concurrency:
-      group: 'release'
-      cancel-in-progress: true
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
-    - name: Download the Windows build
-      uses: actions/download-artifact@v2
-      with:
-        name: windows-latest
-        path: windows-latest
     - name: Compress the builds
       run: |
-        cd windows-latest/squirrel.windows/x64/
+        cd out/make/squirrel.windows/x64/
         7z a -tzip ftcremotedebugger-windows.zip ./
-        cd ../../..
     - name: Update the release tag
       run: |
         git tag -d latest-ci-build
@@ -62,7 +41,7 @@ jobs:
         git push origin latest-ci-build --force
     - name: Update the release
       run: |
-        gh release upload latest-ci-build windows-latest/squirrel.windows/x64/ftcremotedebugger-windows.zip --clobber
+        gh release upload latest-ci-build ftcremotedebugger-windows.zip --clobber
         gh release edit latest-ci-build --prerelease --notes "This build was made from commit ${{ github.sha }}."
       env:
         GH_TOKEN: ${{ github.token }}
