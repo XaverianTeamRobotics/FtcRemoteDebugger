@@ -1,6 +1,6 @@
 {
   "name": "ftcremotedebugger",
-  "productName": "FTC Remote Debugger",
+  "productName": "FTC-Remote-Debugger",
   "version": "1.0.0",
   "description": "Connect remotely to FTC robots runnning an OpMode compatible with the Remote Debugger",
   "main": ".webpack/main",
