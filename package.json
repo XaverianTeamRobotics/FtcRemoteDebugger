@@ -1,8 +1,8 @@
 {
   "name": "ftcremotedebugger",
-  "productName": "FTC Remote Debugger",
+  "productName": "FTC-Remote-Debugger",
   "version": "1.0.0",
-  "description": "Connect remotely to FTC robots runnning an OpMode compatible with the Remote Debugger",
+  "description": "Connect remotely to FTC robots.",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Michael Lachut, for Xaverian Robotics Team",
+    "name": "Xaverian Robotics",
     "email": "robotics@xbhs.net"
   },
   "license": "MIT",
