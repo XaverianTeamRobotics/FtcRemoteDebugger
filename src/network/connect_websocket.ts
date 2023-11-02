@@ -12,7 +12,6 @@ function connectRobotWebsocket(event: IpcMainEvent): WebSocket {
         event.sender.send("connection-status", true)
     }
     socket.onmessage = (_event) => {
-        console.log(_event.data);
         event.sender.send("ws-message",JSON.parse(_event.data.toString()))
     }
     socket.onclose = () => {
