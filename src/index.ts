@@ -63,9 +63,13 @@ ipcMain.on('set-motor-power', (event: IpcMainEvent, ...args: any[]) => {
 
   console.log("Set motor " + motor + " to " + power)
 
-  globalThis.websocket.send(JSON.stringify({
+  var msg: string = JSON.stringify({
     "type": "set-motor-power",
     "motor": motor,
     "power": power
-  }))
+  })
+
+  console.log(msg)
+
+  globalThis.websocket.send(msg)
 })

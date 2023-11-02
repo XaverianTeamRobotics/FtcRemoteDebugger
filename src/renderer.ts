@@ -77,16 +77,20 @@ function setMotorPower(motor: number, power: number) {
     ipcRenderer.send('set-motor-power', motor, power)
 }
 
-for (var i = 0; i < 8; i++) {
-    document.getElementById("set-motor-" + i + "-power").addEventListener('click', () => setMotorPower(i, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
-}
+document.getElementById("set-motor-" + 0 + "-power").addEventListener('click', () => setMotorPower(0, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 1 + "-power").addEventListener('click', () => setMotorPower(1, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 2 + "-power").addEventListener('click', () => setMotorPower(2, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 3 + "-power").addEventListener('click', () => setMotorPower(3, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 4 + "-power").addEventListener('click', () => setMotorPower(4, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 5 + "-power").addEventListener('click', () => setMotorPower(5, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 6 + "-power").addEventListener('click', () => setMotorPower(6, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
+document.getElementById("set-motor-" + 7 + "-power").addEventListener('click', () => setMotorPower(7, parseFloat((<HTMLInputElement> document.getElementById("motor-power-input")).value)))
 
 function setAllMotorPower(power: number) {
     for (var i = 0; i < 8; i++) {
         // Check if that motor is enabled using the "disabled" property on its "set power" button
         if (!(<HTMLInputElement> document.getElementById("set-motor-" + i + "-power")).disabled) {
             setMotorPower(i, power)
-            console.log("Set motor " + i + " to " + power)
         }
     }
 }
