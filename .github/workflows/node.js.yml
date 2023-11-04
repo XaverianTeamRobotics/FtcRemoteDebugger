@@ -5,7 +5,6 @@ name: Build and package
 
 on:
   push:
-    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
@@ -30,18 +29,3 @@ jobs:
       with:
         name: windows-latest
         path: out/make
-    - name: Compress the builds
-      run: |
-        cd out/make/squirrel.windows/x64/
-        7z a -tzip ftcremotedebugger-windows.zip ./
-    - name: Update the release tag
-      run: |
-        git tag -d latest-ci-build
-        git tag latest-ci-build
-        git push origin latest-ci-build --force
-    - name: Update the release
-      run: |
-        gh release upload latest-ci-build out/make/squirrel.windows/x64/ftcremotedebugger-windows.zip --clobber
-        gh release edit latest-ci-build --prerelease --notes "This build was made from commit ${{ github.sha }}."
-      env:
-        GH_TOKEN: ${{ github.token }}
