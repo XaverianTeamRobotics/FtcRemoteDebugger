@@ -25,17 +25,10 @@ jobs:
     - run: npm ci
     - run: npm run make
     - uses: sigstore/cosign-installer@main
-    - name: Find all output EXE files
-      run: |
-        dir out/make/squirrel.windows/x64
-        cd out/make/squirrel.windows/x64
-        echo "executables=$(dir /b /s *.exe)" >> $GITHUB_ENV
-        cd ../../../..
     - name: Sign all EXE files
       run: |
-        echo "Signing $exe"
-        cosign sign -key cosign.key -cert cosign.cert -a sha256 -i $exe
-      
+        cosign sign-blob out\make\squirrel.windows\x64\*.exe -y
+  
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
       with:
