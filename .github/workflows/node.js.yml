@@ -29,7 +29,7 @@ jobs:
     - uses: sigstore/cosign-installer@v3.1.1
     - name: Sign the build
       run: |
-        cosign sign "out/make/squirrel.windows/x64/FTC-Remote-Debugger-$pkg_version Setup.exe"
+        cosign sign "out/make/squirrel.windows/x64/FTC-Remote-Debugger-${{ env.pkg_version }} Setup.exe"
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
       with:
