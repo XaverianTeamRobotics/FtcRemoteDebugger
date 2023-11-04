@@ -28,7 +28,9 @@ jobs:
     - name: Find all output EXE files
       run: |
         dir out/make/squirrel.windows/x64
-        echo "executables=$(dir /b /s out/make/squirrel.windows/x64/*.exe)" >> $GITHUB_ENV
+        cd out/make/squirrel.windows/x64
+        echo "executables=$(dir /b /s *.exe)" >> $GITHUB_ENV
+        cd ../../../..
     - name: Sign all EXE files
       run: |
         echo "Signing $exe"
