@@ -24,6 +24,18 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run make
+    - uses: sigstore/cosign-installer@main
+    - name: Find all output EXE files
+      id: find
+      run: |
+        echo "::set-output name=files::$(find out/make -name '*.exe' -type f -print0 | xargs -0)"
+    - name: Sign all EXE files
+      run: |
+        echo "Signing files ${{ steps.find.outputs.files }}"
+        for file in ${{ steps.find.outputs.files }}; do
+          echo "Signing $file"
+          cosign sign-blob $file -y
+        done
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
       with:
