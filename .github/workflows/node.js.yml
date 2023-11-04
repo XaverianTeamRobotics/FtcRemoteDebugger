@@ -28,13 +28,11 @@ jobs:
     - name: Find all output EXE files
       run: |
         dir out/make/squirrel.windows/x64
-        echo "executables=$(find out/make/squirrel.windows/x64 -type f -name '*.exe' -print0 | xargs -0)" >> $GITHUB_ENV
+        echo "executables=$(dir /b /s out/make/squirrel.windows/x64/*.exe)" >> $GITHUB_ENV
     - name: Sign all EXE files
       run: |
-        for exe in $executables; do
-          echo "Signing $exe"
-          cosign sign -key cosign.key -cert cosign.cert -a sha256 -i $exe
-        done
+        echo "Signing $exe"
+        cosign sign -key cosign.key -cert cosign.cert -a sha256 -i $exe
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
