@@ -28,7 +28,7 @@ jobs:
     - name: Sign the build
     # Sign the build using the OICD token provided by the GitHub Action
       run: |
-        export version=$(node -p "require('./package.json').version")
+        $version=$(node -p "require('./package.json').version")
         cd out/make/squirrel.windows/x64
         cosign sign-blob FTC-Remote-Debugger-$version Setup.exe -y --oidc-provider="github-actions"
     - name: Upload a Build Artifact
