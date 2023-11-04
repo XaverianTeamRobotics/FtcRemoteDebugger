@@ -24,11 +24,13 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run make
-    - uses: sigstore/cosign-installer@main
-    - name: Sign all EXE files
+    - name: Get the verision from package.json
+      run: echo "pkg_version=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+    - name: Get cosign
+      uses: sigstore/cosign-installer
+    - name: Sign the build
       run: |
-        cosign sign-blob out\make\squirrel.windows\x64\*.exe -y
-  
+        cosign sign "out/make/squirrel.windows/x64/FTC-Remote-Debugger-$pkg_version Setup.exe"
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
       with:
