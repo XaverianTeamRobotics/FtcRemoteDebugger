@@ -9,9 +9,19 @@ import { mainConfig } from './webpack.main.config';
 import { rendererConfig } from './webpack.renderer.config';
 
 const config: ForgeConfig = {
-  packagerConfig: {},
+  packagerConfig: {
+    icon: './assets/icon'
+  },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({})],
+  makers: [new MakerSquirrel({}), new MakerZIP({}),
+    {
+    name: '@electron-forge/maker-deb',
+    config: {
+      options: {
+        icon: '/path/to/icon.png'
+      }
+    }
+  }],
   plugins: [
     new WebpackPlugin({
       mainConfig,

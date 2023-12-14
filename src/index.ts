@@ -20,10 +20,12 @@ const createWindow = (): void => {
       nodeIntegration: true,
       contextIsolation: false,
     },
+    icon: '/style/icon.png'
   });
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+  mainWindow.setMenu(null);
 };
 
 // This method will be called when Electron has finished
@@ -67,6 +69,23 @@ ipcMain.on('set-motor-power', (event: IpcMainEvent, ...args: any[]) => {
     "type": "set-motor-power",
     "motor": motor,
     "power": power
+  })
+
+  console.log(msg)
+
+  globalThis.websocket.send(msg)
+})
+
+ipcMain.on('set-servo-position', (event: IpcMainEvent, ...args: any[]) => {
+  var servo: number = args[0]
+  var position: number = args[1]
+
+  console.log("Set servo " + servo + " to " + position)
+
+  var msg: string = JSON.stringify({
+    "type": "set-servo-position",
+    "servo": servo,
+    "position": position
   })
 
   console.log(msg)
