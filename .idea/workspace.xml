@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56debf27-c9e8-4167-95f3-ce043dae0aad" name="Changes" comment="v1.2.0">
+    <list default="true" id="56debf27-c9e8-4167-95f3-ce043dae0aad" name="Changes" comment="Added expansion hub servos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +15,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="v1.2.0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;24cteahan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fcb1351d-7904-47cb-96bd-3c7c61f390c4" />
+        <option name="url" value="https://github.com/XaverianTeamRobotics/FtcRemoteDebugger.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="zn3q7t94" />
@@ -44,37 +55,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "v1.2.0",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cjose/IdeaProjects/FtcRemoteDebugger/package.json",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Make.executor": "Run",
-    "npm.Run.executor": "Run",
-    "npm.make --icon=./assets/icon.ico.executor": "Run",
-    "npm.make.executor": "Run",
-    "npm.start.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\cjose\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v1.3.0-beta&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cjose/IdeaProjects/FtcRemoteDebugger/package.json&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Make.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Run.executor&quot;: &quot;Run&quot;,
+    &quot;npm.make --icon=./assets/icon.ico.executor&quot;: &quot;Run&quot;,
+    &quot;npm.make.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\cjose\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Run">
     <configuration name="Make" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -119,7 +130,8 @@
       <workItem from="1702582243401" duration="31000" />
       <workItem from="1702582763839" duration="3333000" />
       <workItem from="1704211959361" duration="716000" />
-      <workItem from="1704742984671" duration="876000" />
+      <workItem from="1704742984671" duration="1815000" />
+      <workItem from="1704745032095" duration="141000" />
     </task>
     <task id="LOCAL-00001" summary="v1.2.0">
       <option name="closed" value="true" />
@@ -129,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702584251990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added expansion hub servos">
+      <option name="closed" value="true" />
+      <created>1704744024015</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704744024015</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added expansion hub servos">
+      <option name="closed" value="true" />
+      <created>1704744216697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704744216697</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="v1.2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.2.0" />
+    <MESSAGE value="Added expansion hub servos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added expansion hub servos" />
   </component>
 </project>
