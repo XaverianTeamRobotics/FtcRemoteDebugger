@@ -112,6 +112,12 @@ document.getElementById("set-servo-" + 2 + "-position").addEventListener('click'
 document.getElementById("set-servo-" + 3 + "-position").addEventListener('click', () => setServoPosition(3, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
 document.getElementById("set-servo-" + 4 + "-position").addEventListener('click', () => setServoPosition(4, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
 document.getElementById("set-servo-" + 5 + "-position").addEventListener('click', () => setServoPosition(5, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 6 + "-position").addEventListener('click', () => setServoPosition(6, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 7 + "-position").addEventListener('click', () => setServoPosition(7, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 8 + "-position").addEventListener('click', () => setServoPosition(8, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 9 + "-position").addEventListener('click', () => setServoPosition(9, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 10 + "-position").addEventListener('click', () => setServoPosition(10, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
+document.getElementById("set-servo-" + 11 + "-position").addEventListener('click', () => setServoPosition(11, parseFloat((<HTMLInputElement> document.getElementById("servo-position-input")).value)))
 
 function setAllMotorPower(power: number) {
     for (var i = 0; i < 8; i++) {
@@ -123,7 +129,7 @@ function setAllMotorPower(power: number) {
 }
 
 function setAllServoPosition(position: number) {
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 12; i++) {
         setServoPosition(i, position)
     }
 }
